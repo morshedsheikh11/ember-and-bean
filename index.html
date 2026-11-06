@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ember &amp; Bean | Specialty Coffee, Fresh Food &amp; Table Bookings in Bangsar</title>
+  <meta name="description" content="Ember &amp; Bean is a neighbourhood café and restaurant in Bangsar, Kuala Lumpur. Coffee roasted in-house every morning, homemade food, table bookings and online ordering for pickup or delivery.">
+  <meta name="theme-color" content="#2B1A12">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ember &amp; Bean | Your perfect cup is waiting">
+  <meta property="og:description" content="Specialty coffee, fresh food and a cozy place to slow down.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1511081692775-05d0f180a065?w=1200&h=630&fit=crop&q=70&auto=format">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232B1A12'/%3E%3Cellipse cx='16' cy='16' rx='8' ry='11' transform='rotate(24 16 16)' fill='%23C68B59'/%3E%3Cpath d='M20 6.500C14 12 19 19 12 25.500' stroke='%232B1A12' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Ember & Bean",
+    "description": "Neighbourhood café and restaurant roasting its own beans and serving fresh, homemade food.",
+    "servesCuisine": ["Coffee", "Brunch", "Malaysian", "Western"],
+    "priceRange": "RM 10 - RM 45",
+    "telephone": "+60 3-5550 0142",
+    "acceptsReservations": true,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 Lorong Bara",
+      "addressLocality": "Bangsar, Kuala Lumpur",
+      "postalCode": "59100",
+      "addressCountry": "MY"
+    },
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "07:30", "closes": "21:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "07:30", "closes": "22:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "22:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:00", "closes": "21:00"}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4ZM3 6h18M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.650a1 1 0 0 0-.22-.624l-3.480-4.350A1 1 0 0 0 17.520 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.920v3a2 2 0 0 1-2.180 2 19.790 19.790 0 0 1-8.630-3.070 19.500 19.500 0 0 1-6-6 19.790 19.790 0 0 1-3.070-8.670A2 2 0 0 1 4.110 2h3a2 2 0 0 1 2 1.720 12.840 12.840 0 0 0 .7 2.810 2 2 0 0 1-.45 2.110L8.090 9.910a16 16 0 0 0 6 6l1.270-1.270a2 2 0 0 1 2.110-.45 12.840 12.840 0 0 0 2.810.7A2 2 0 0 1 22 16.920z"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.500 14.500A2.500 2.500 0 0 0 11 12c0-1.380-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.500 2 4.900 4 6.500 2 1.600 3 3.500 3 5.500a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.500 2.500 0 0 0 2.500 2.500z"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.800 6.100C15.500 5 17 4.480 19 2c1 2 2 4.180 2 8 0 5.500-4.780 10-10 10ZM2 21c0-3 1.850-5.360 5.080-6C9.500 14.520 12 13 13 12"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.900-3-5.500s-3.500-4-4-6.500c-.5 2.500-2 4.900-4 6.500C6 11.100 5 13 5 15a7 7 0 0 0 7 7z"/></symbol>
+    <symbol id="i-cup" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4ZM6 2v2M10 2v2M14 2v2"/></symbol>
+    <symbol id="i-replay" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.750 9.750 0 0 0-6.740 2.740L3 8M3 3v5h5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path class="fill" d="m12 2 3.090 6.260L22 9.270l-5 4.870 1.180 6.880L12 17.770l-6.180 3.250L7 14.140 2 9.270l6.910-1.010L12 2Z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.370A4 4 0 1 1 12.630 8 4 4 0 0 1 16 11.370zM17.500 6.500h.01"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path class="fill" d="M12.525.02c1.310-.02 2.610-.01 3.910-.02.08 1.530.63 3.090 1.750 4.170 1.120 1.110 2.700 1.620 4.240 1.790v4.030c-1.440-.05-2.890-.35-4.200-.97-.57-.26-1.100-.59-1.620-.93-.01 2.920.01 5.840-.02 8.750-.08 1.400-.54 2.790-1.350 3.940-1.310 1.920-3.580 3.170-5.910 3.210-1.430.08-2.860-.31-4.080-1.030-2.020-1.190-3.440-3.370-3.650-5.710-.02-.5-.03-1-.01-1.490.18-1.900 1.120-3.720 2.580-4.960 1.660-1.440 3.980-2.130 6.150-1.720.02 1.480-.04 2.960-.04 4.440-.99-.32-2.150-.23-3.020.37-.63.41-1.110 1.040-1.360 1.750-.21.51-.15 1.070-.14 1.610.24 1.640 1.820 3.020 3.500 2.870 1.120-.01 2.190-.66 2.770-1.610.19-.33.4-.67.41-1.060.1-1.790.06-3.570.07-5.360.01-4.030-.01-8.050.02-12.070z"/></symbol>
+    <symbol id="logo-mark" viewBox="0 0 40 40">
+      <ellipse class="lm-bean" cx="20" cy="20" rx="12.500" ry="17" transform="rotate(24 20 20)"/>
+      <path class="lm-crease" d="M27 5.500C18 13 26 23 14 34.500"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="logo" href="#hero" aria-label="Ember &amp; Bean home">
+      <svg class="logo__mark" aria-hidden="true"><use href="#logo-mark"/></svg>
+      <span class="logo__text">Ember <em>&amp;</em> Bean</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Main">
+      <a href="#story">Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#process">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit Us</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a class="btn btn--outline btn--sm nav__book" href="#book">Book a Table</a>
+      <a class="btn btn--primary btn--sm" href="#order">Order Online</a>
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <nav aria-label="Mobile">
+      <a href="#story">Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#process">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit Us</a>
+    </nav>
+    <a class="btn btn--outline btn--block" href="#book">Book a Table</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero" id="hero" aria-label="How your cup is made">
+  <div class="hero__sticky">
+    <div class="hero__glow" id="heroGlow" aria-hidden="true"></div>
+
+    <div class="hero__stage" id="heroStage" aria-hidden="true">
+      <svg id="scene" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMax meet" role="presentation">
+        <defs>
+          <linearGradient id="gCup" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" stop-color="#8f8375"/><stop offset=".1" stop-color="#cfc6b8"/>
+            <stop offset=".36" stop-color="#fffdf9"/><stop offset=".62" stop-color="#f4eee4"/>
+            <stop offset=".88" stop-color="#bdb1a1"/><stop offset="1" stop-color="#83776a"/>
+          </linearGradient>
+          <linearGradient id="gCupShade" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#2b1a12" stop-opacity="0"/><stop offset=".55" stop-color="#2b1a12" stop-opacity="0"/>
+            <stop offset="1" stop-color="#2b1a12" stop-opacity=".42"/>
+          </linearGradient>
+          <linearGradient id="gRim" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" stop-color="#d6cdbf"/><stop offset=".4" stop-color="#fff"/><stop offset="1" stop-color="#d9d0c2"/>
+          </linearGradient>
+          <linearGradient id="gInner" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#a99d8e"/><stop offset=".5" stop-color="#d9d0c3"/><stop offset="1" stop-color="#f6f0e6"/>
+          </linearGradient>
+          <linearGradient id="gSaucer" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" stop-color="#9c9082"/><stop offset=".4" stop-color="#fbf7f0"/><stop offset=".7" stop-color="#ece4d7"/><stop offset="1" stop-color="#8f8375"/>
+          </linearGradient>
+          <radialGradient id="gSaucerWell" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#6e6155"/><stop offset=".55" stop-color="#b8ac9d"/><stop offset="1" stop-color="#ece4d7"/>
+          </radialGradient>
+          <radialGradient id="gShadow" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#000" stop-opacity=".7"/><stop offset=".65" stop-color="#000" stop-opacity=".35"/><stop offset="1" stop-color="#000" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="gBean" cx=".36" cy=".3" r=".8">
+            <stop offset="0" stop-color="#b57a4a"/><stop offset=".45" stop-color="#744426"/><stop offset="1" stop-color="#2e170b"/>
+          </radialGradient>
+          <radialGradient id="gHalo" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#c68b59" stop-opacity=".34"/><stop offset="1" stop-color="#c68b59" stop-opacity="0"/></radialGradient>
+          <radialGradient id="gSheen" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#ffe6c9" stop-opacity=".55"/><stop offset="1" stop-color="#ffe6c9" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="gWater" cx=".5" cy=".42" r=".6">
+            <stop offset="0" stop-color="#f6e6cd"/><stop offset="1" stop-color="#cfae85"/>
+          </radialGradient>
+          <radialGradient id="gCoffee" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#3b1e10"/><stop offset=".72" stop-color="#2c150a"/><stop offset=".92" stop-color="#6d4022"/><stop offset="1" stop-color="#a6703f"/>
+          </radialGradient>
+          <linearGradient id="gStream" gradientUnits="userSpaceOnUse" x1="0" y1="300" x2="0" y2="640">
+            <stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#ffeeda" stop-opacity=".65"/>
+          </linearGradient>
+          <linearGradient id="gCopper" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" stop-color="#6d3f22"/><stop offset=".3" stop-color="#e4ab79"/><stop offset=".5" stop-color="#c68b59"/><stop offset=".82" stop-color="#8b5430"/><stop offset="1" stop-color="#55301a"/>
+          </linearGradient>
+          <linearGradient id="gSpout" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="210" y2="240">
+            <stop offset="0" stop-color="#e4ab79"/><stop offset="1" stop-color="#a86d40"/>
+          </linearGradient>
+          <clipPath id="clipInner"><ellipse cx="430" cy="592" rx="173" ry="49"/></clipPath>
+          <clipPath id="clipFront"><rect x="200" y="590" width="460" height="80"/></clipPath>
+        </defs>
+
+        <!-- Cup, saucer and everything that lives inside them -->
+        <g id="cupBack">
+          <ellipse cx="430" cy="838" rx="370" ry="66" fill="url(#gShadow)"/>
+          <ellipse cx="430" cy="826" rx="300" ry="60" fill="#7b6f62"/>
+          <ellipse cx="430" cy="816" rx="300" ry="60" fill="url(#gSaucer)"/>
+          <ellipse cx="430" cy="814" rx="178" ry="33" fill="url(#gSaucerWell)"/>
+
+          <path d="M606,630 C690,606 742,650 716,704 C696,746 628,756 570,744" fill="none" stroke="#8f8375" stroke-width="30" stroke-linecap="round"/>
+          <path d="M606,630 C690,606 742,650 716,704 C696,746 628,756 570,744" fill="none" stroke="#efe8dc" stroke-width="24" stroke-linecap="round"/>
+          <path d="M618,622 C684,606 730,644 708,694" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="6" stroke-linecap="round"/>
+
+          <ellipse cx="430" cy="590" rx="185" ry="58" fill="url(#gRim)"/>
+          <ellipse id="interior" cx="430" cy="592" rx="173" ry="49" fill="url(#gInner)"/>
+        </g>
+
+        <g id="bean" transform="translate(430 628) rotate(330) scale(.42)" opacity="0">
+            <circle id="beanHalo" r="210" fill="url(#gHalo)"/>
+            <path d="M0,-88C44,-88 66,-44 66,2C66,50 40,88 -2,88C-46,88 -66,46 -66,0C-66,-46 -42,-88 0,-88Z" fill="url(#gBean)" stroke="#d69c6b" stroke-opacity=".4" stroke-width="2"/>
+            <path d="M-4,-86C36,-42 -36,28 8,86" fill="none" stroke="#150904" stroke-width="10" stroke-linecap="round"/>
+            <path d="M5,-80C42,-40 -26,28 16,80" fill="none" stroke="#8a5532" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="-30" cy="-38" rx="22" ry="34" transform="rotate(16 -30 -38)" fill="url(#gSheen)"/>
+          </g>
+
+        <g id="cupFront">
+          <g clip-path="url(#clipInner)">
+            <ellipse id="water" cx="430" cy="606" rx="168" ry="44" fill="url(#gWater)" opacity="0"/>
+            <ellipse id="coffee" cx="430" cy="606" rx="172" ry="46" fill="url(#gCoffee)"/>
+            <g transform="translate(430 608) scale(1 .3)">
+              <g id="heart">
+                <path d="M0,86C-40,44 -128,8 -128,-52C-128,-96 -84,-116 -50,-108C-26,-102 -8,-86 0,-60C8,-86 26,-102 50,-108C84,-116 128,-96 128,-52C128,8 40,44 0,86Z" fill="#f3e3cb" stroke="#d9b892" stroke-opacity=".5" stroke-width="8"/>
+                <path transform="translate(0 -8) scale(.68)" d="M0,86C-40,44 -128,8 -128,-52C-128,-96 -84,-116 -50,-108C-26,-102 -8,-86 0,-60C8,-86 26,-102 50,-108C84,-116 128,-96 128,-52C128,8 40,44 0,86Z" fill="#a9713f"/>
+                <path transform="translate(0 -14) scale(.46)" d="M0,86C-40,44 -128,8 -128,-52C-128,-96 -84,-116 -50,-108C-26,-102 -8,-86 0,-60C8,-86 26,-102 50,-108C84,-116 128,-96 128,-52C128,8 40,44 0,86Z" fill="#f8ecd9"/>
+              </g>
+            </g>
+            <ellipse id="ripple1" cx="470" cy="606" rx="30" ry="9" fill="none" stroke="#fff" stroke-opacity="0" stroke-width="2.500"/>
+            <ellipse id="ripple2" cx="470" cy="606" rx="30" ry="9" fill="none" stroke="#fff" stroke-opacity="0" stroke-width="2"/>
+          </g>
+
+          <path id="stream" d="" fill="url(#gStream)"/>
+
+          <path d="M245,590A185,58 0 1 1 615,590A185,58 0 1 1 245,590ZM257,592A173,49 0 1 0 603,592A173,49 0 1 0 257,592Z" fill="url(#gRim)" fill-rule="evenodd" clip-path="url(#clipFront)"/>
+          <path id="cupBody" d="M245,590A185,58 0 0 0 615,590C612,690 565,790 518,806A88,20 0 0 1 342,806C295,790 248,690 245,590Z" fill="url(#gCup)"/>
+          <path d="M245,590A185,58 0 0 0 615,590C612,690 565,790 518,806A88,20 0 0 1 342,806C295,790 248,690 245,590Z" fill="url(#gCupShade)"/>
+          <path d="M304,664C318,716 344,764 372,790" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="10" stroke-linecap="round"/>
+        </g>
+
+        <g id="kettle" opacity="0">
+          <path d="M205,238C135,262 105,225 96,160C84,78 60,-2 20,-10C10,-12 2,-8 0,0" fill="none" stroke="url(#gSpout)" stroke-width="15"/>
+          <path d="M100,160C90,82 66,8 24,-4" fill="none" stroke="#ffe2c4" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"/>
+          <path d="M372,118C470,105 502,150 492,205C484,244 450,264 420,262" fill="none" stroke="#5d3720" stroke-width="20" stroke-linecap="round"/>
+          <path d="M380,112C462,102 492,146 484,196" fill="none" stroke="#a86d40" stroke-opacity=".7" stroke-width="4" stroke-linecap="round"/>
+          <path d="M190,285L430,285Q440,285 437,272L378,105Q372,92 358,92L262,92Q248,92 242,105L183,272Q180,285 190,285Z" fill="url(#gCopper)"/>
+          <path d="M240,120L205,270" stroke="#ffe2c4" stroke-opacity=".5" stroke-width="7" stroke-linecap="round"/>
+          <path d="M252,92Q310,50 368,92Z" fill="#a86d40"/>
+          <rect x="246" y="88" width="128" height="8" rx="4" fill="#6d3f22"/>
+          <circle cx="310" cy="56" r="13" fill="#5d3720"/>
+          <circle cx="306" cy="52" r="4" fill="#a86d40"/>
+        </g>
+
+        <g id="droplets"></g>
+      </svg>
+    </div>
+
+    <canvas id="heroCanvas" class="hero__canvas" aria-hidden="true"></canvas>
+
+    <div class="hero__copy">
+      <p class="hero__caption" data-step="1"><span class="hero__kicker">Step one</span>It starts with one bean.</p>
+      <p class="hero__caption" data-step="2"><span class="hero__kicker">Step two</span>Roasted in-house, every morning.</p>
+      <p class="hero__caption" data-step="3"><span class="hero__kicker">Step three</span>Brewed slowly, with care.</p>
+      <div class="hero__final" id="heroFinal">
+        <h1 data-final="0">Your perfect cup is waiting.</h1>
+        <p class="hero__sub" data-final="1">Specialty coffee, fresh food and a cozy place to slow down.</p>
+        <div class="hero__cta" id="heroCta" data-final="2">
+          <a class="btn btn--light" href="#book">Book a Table</a>
+          <a class="btn btn--primary" href="#order">Order Online</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__rail" id="heroRail" aria-hidden="true">
+      <span class="hero__rail-fill" id="heroRailFill"></span>
+      <i></i><i></i><i></i><i></i>
+    </div>
+    <div class="hero__hint" id="heroHint" aria-hidden="true"><span>Scroll to brew</span><b></b></div>
+    <a class="hero__skip" id="heroSkip" href="#story">Skip intro <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <button class="hero__replay" id="heroReplay" type="button" hidden><svg class="icon icon--sm" aria-hidden="true"><use href="#i-replay"/></svg> Replay</button>
+  </div>
+</section>
+
+<!-- ============ 2. STORY ============ -->
+<section class="section story" id="story">
+  <div class="container story__grid">
+    <div class="story__media reveal">
+      <img class="story__img" src="https://images.unsplash.com/photo-1511081692775-05d0f180a065?w=900&h=1100&fit=crop&q=72&auto=format"
+           srcset="https://images.unsplash.com/photo-1511081692775-05d0f180a065?w=560&h=684&fit=crop&q=72&auto=format 560w, https://images.unsplash.com/photo-1511081692775-05d0f180a065?w=900&h=1100&fit=crop&q=72&auto=format 900w"
+           sizes="(max-width: 900px) 92vw, 44vw" width="900" height="1100" loading="lazy" decoding="async"
+           alt="Warm café interior with wooden tables under hanging filament bulbs">
+      <img class="story__inset" src="https://images.unsplash.com/photo-1777383505116-4c736a35ad38?w=480&h=480&fit=crop&q=70&auto=format"
+           width="240" height="240" loading="lazy" decoding="async" alt="Freshly roasted coffee beans turning in the roaster">
+    </div>
+    <div class="story__text">
+      <p class="eyebrow reveal">Our story</p>
+      <h2 class="reveal">A small café with a very warm roaster.</h2>
+      <p class="lead reveal">Ember &amp; Bean began with a second-hand 5&nbsp;kg drum roaster and a shoplot on a quiet Bangsar lane. Every morning before the doors open, we roast the day's beans in the back room, and the smell finds its way to the street.</p>
+      <p class="reveal">Our kitchen works the same way. Bread is baked here, sambal is cooked down slowly, and desserts are made in small batches until they run out. Stay for a long lunch, bring your laptop, bring your mother. There's always a table worth keeping.</p>
+      <ul class="stats reveal">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-flame"/></svg><strong>Roasted daily</strong><span>Small batches, in-house</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg><strong>Locally sourced</strong><span>Farms and bakers we know</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg><strong>Open 7 days</strong><span>From 7:30 am on weekdays</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. MENU ============ -->
+<section class="section menu" id="menu">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow reveal">Menu highlights</p>
+      <h2 class="reveal">Made here, this morning.</h2>
+      <p class="reveal">A few favourites from the bar and the kitchen. Add anything to your order and we'll have it ready for pickup or delivery.</p>
+    </div>
+    <div class="tabs reveal" role="tablist" aria-label="Menu categories" id="menuTabs"></div>
+    <div class="menu__grid" id="menuGrid" role="tabpanel" aria-live="polite"></div>
+    <noscript><p class="center">Please enable JavaScript to browse the menu, or call us on +60 3-5550 0142.</p></noscript>
+  </div>
+</section>
+
+<!-- ============ 4. ORDER ============ -->
+<section class="section order" id="order">
+  <div class="container order__grid">
+    <div class="order__intro">
+      <p class="eyebrow eyebrow--light reveal">Order online</p>
+      <h2 class="reveal">Our kitchen, your table at home.</h2>
+      <p class="reveal">Pick your favourites and we'll start the moment your order comes in.</p>
+
+      <div class="panel reveal">
+        <h3 class="panel__title"><span>1</span> How would you like it?</h3>
+        <div class="toggle" role="radiogroup" aria-label="Order type">
+          <button type="button" class="toggle__btn" role="radio" data-mode="pickup"><svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg> Pickup</button>
+          <button type="button" class="toggle__btn" role="radio" data-mode="delivery"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg> Delivery</button>
+        </div>
+        <div class="field" data-for="pickup">
+          <label for="pickupTime">Pickup time</label>
+          <select id="pickupTime" data-bind="pickupTime"></select>
+        </div>
+        <div class="field" data-for="delivery" hidden>
+          <label for="address">Delivery address</label>
+          <textarea id="address" data-bind="address" rows="2" autocomplete="street-address" placeholder="Unit, street and postcode"></textarea>
+          <p class="field__hint">We deliver within 5 km of Bangsar. Flat fee RM 6.00.</p>
+        </div>
+      </div>
+
+      <button class="btn btn--primary btn--block reveal" id="orderViewCart" type="button">
+        <svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg>
+        <span id="orderViewCartLabel">Your cart is empty</span>
+      </button>
+    </div>
+
+    <div class="panel panel--list reveal">
+      <h3 class="panel__title"><span>2</span> Pick your items</h3>
+      <div class="chips" id="orderChips" role="group" aria-label="Filter by category"></div>
+      <ul class="order-list" id="orderList"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. BOOK ============ -->
+<section class="section book" id="book">
+  <div class="container book__grid">
+    <div class="book__media reveal">
+      <img src="https://images.unsplash.com/photo-1669310095420-8cd109dba5cb?w=900&h=1120&fit=crop&q=72&auto=format"
+           srcset="https://images.unsplash.com/photo-1669310095420-8cd109dba5cb?w=560&h=500&fit=crop&q=72&auto=format 560w, https://images.unsplash.com/photo-1669310095420-8cd109dba5cb?w=900&h=1120&fit=crop&q=72&auto=format 900w"
+           sizes="(max-width: 900px) 92vw, 42vw" width="900" height="1120" loading="lazy" decoding="async"
+           alt="Cozy restaurant table set with plates and glasses in warm light">
+      <div class="book__note">
+        <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+        <p><strong>Tables are held for 15 minutes.</strong> Running late? Just give us a call.</p>
+      </div>
+    </div>
+
+    <div class="book__panel reveal">
+      <p class="eyebrow">Book a table</p>
+      <h2>Save yourself a seat.</h2>
+      <form id="bookForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="bName">Name</label>
+            <input id="bName" name="name" type="text" autocomplete="name" required>
+            <p class="field__error" id="bName-err"></p>
+          </div>
+          <div class="field">
+            <label for="bPhone">Phone number</label>
+            <input id="bPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="012-345 6789" required>
+            <p class="field__error" id="bPhone-err"></p>
+          </div>
+          <div class="field field--full">
+            <label for="bEmail">Email</label>
+            <input id="bEmail" name="email" type="email" autocomplete="email" required>
+            <p class="field__error" id="bEmail-err"></p>
+          </div>
+          <div class="field">
+            <label for="bDate">Date</label>
+            <input id="bDate" name="date" type="date" required>
+            <p class="field__error" id="bDate-err"></p>
+          </div>
+          <div class="field">
+            <label for="bTime">Time</label>
+            <select id="bTime" name="time" required><option value="">Choose a date first</option></select>
+            <p class="field__error" id="bTime-err"></p>
+          </div>
+          <div class="field field--full">
+            <label for="bGuests">Number of guests</label>
+            <select id="bGuests" name="guests" required>
+              <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option>
+              <option>6</option><option>7</option><option>8</option><option>9</option><option>10+</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="bNote">Special request <span class="optional">(optional)</span></label>
+            <textarea id="bNote" name="note" rows="3" placeholder="Birthday, high chair, allergies, a quiet corner..."></textarea>
+          </div>
+        </div>
+        <button class="btn btn--primary btn--block" type="submit">Confirm Booking</button>
+      </form>
+
+      <div class="success" id="bookSuccess" tabindex="-1" hidden>
+        <div class="success__icon"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div>
+        <h3 id="bookSuccessTitle"></h3>
+        <p id="bookSuccessText"></p>
+        <button class="btn btn--outline-dark" id="bookAgain" type="button">Make another booking</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. PROCESS ============ -->
+<section class="section process" id="process">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow eyebrow--light reveal">How we brew</p>
+      <h2 class="reveal">Four steps, no shortcuts.</h2>
+    </div>
+    <ol class="steps">
+      <li class="reveal"><span class="steps__icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span><h3>Sourcing</h3><p>We buy direct from small farms, from Sabah to Sidamo.</p></li>
+      <li class="reveal"><span class="steps__icon"><svg class="icon" aria-hidden="true"><use href="#i-flame"/></svg></span><h3>Roasting</h3><p>Small batches every morning, profiled for each origin.</p></li>
+      <li class="reveal"><span class="steps__icon"><svg class="icon" aria-hidden="true"><use href="#i-drop"/></svg></span><h3>Brewing</h3><p>Weighed, timed and tasted by our baristas all day.</p></li>
+      <li class="reveal"><span class="steps__icon"><svg class="icon" aria-hidden="true"><use href="#i-cup"/></svg></span><h3>Serving</h3><p>Poured fresh and brought to your table, still warm.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 7. GALLERY ============ -->
+<section class="section gallery" id="gallery">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow reveal">Gallery</p>
+      <h2 class="reveal">A look around the café.</h2>
+    </div>
+    <div class="gallery__grid">
+      <figure class="g-tall reveal"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=640&h=900&fit=crop&q=70&auto=format" width="640" height="900" loading="lazy" decoding="async" alt="Barista pouring latte art into a cup"></figure>
+      <figure class="g-wide reveal"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=900&h=440&fit=crop&q=70&auto=format" width="900" height="440" loading="lazy" decoding="async" alt="Guests sitting inside the café"></figure>
+      <figure class="g-tall reveal"><img src="https://images.unsplash.com/photo-1757949921983-ab4c911cc3fe?w=640&h=900&fit=crop&q=70&auto=format" width="640" height="900" loading="lazy" decoding="async" alt="Barista at work, pouring milk into coffee cups"></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1529892485617-25f63cd7b1e9?w=480&h=440&fit=crop&q=70&auto=format" width="480" height="440" loading="lazy" decoding="async" alt="Overhead view of a café latte on a table"></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1534432182912-63863115e106?w=480&h=440&fit=crop&q=70&auto=format" width="480" height="440" loading="lazy" decoding="async" alt="Fresh pastries on display"></figure>
+      <figure class="g-wide reveal"><img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=900&h=440&fit=crop&q=70&auto=format" width="900" height="440" loading="lazy" decoding="async" alt="The coffee bar under pendant lights"></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1773118360501-00f979fd9322?w=480&h=440&fit=crop&q=70&auto=format" width="480" height="440" loading="lazy" decoding="async" alt="Freshly roasted beans in the roaster"></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1643944471768-2d2eac3afb6d?w=480&h=440&fit=crop&q=70&auto=format" width="480" height="440" loading="lazy" decoding="async" alt="A display case full of baked pastries"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. REVIEWS ============ -->
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow reveal">What guests say</p>
+      <h2 class="reveal">Kind words from the regulars.</h2>
+    </div>
+    <div class="reviews__grid">
+      <figure class="review reveal">
+        <div class="stars" role="img" aria-label="5 out of 5 stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></div>
+        <blockquote>The flat white is the best I've had in KL, and the nasi lemak had me coming back the same week.</blockquote>
+        <figcaption>Aisyah</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" role="img" aria-label="5 out of 5 stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></div>
+        <blockquote>We booked a corner table for my dad's birthday. They remembered the cake without being asked twice.</blockquote>
+        <figcaption>Daniel</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" role="img" aria-label="4 out of 5 stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon icon--dim"><use href="#i-star"/></svg></div>
+        <blockquote>Quiet in the mornings, lovely light and the croissants sell out by ten. Come early, it's worth it.</blockquote>
+        <figcaption>Mei Ling</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. VISIT ============ -->
+<section class="section visit" id="visit">
+  <div class="container visit__grid">
+    <div class="visit__info">
+      <p class="eyebrow reveal">Visit us</p>
+      <h2 class="reveal">Come in and stay a while.</h2>
+      <p class="open-now reveal" id="openNow"></p>
+      <ul class="contact reveal">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span>12 Lorong Bara, Bangsar<br>59100 Kuala Lumpur</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+60355500142">+60 3-5550 0142</a></li>
+      </ul>
+      <table class="hours reveal" id="hoursTable">
+        <caption class="sr-only">Opening hours</caption>
+        <tbody>
+          <tr data-day="1"><th scope="row">Monday</th><td>7:30 am – 9:00 pm</td></tr>
+          <tr data-day="2"><th scope="row">Tuesday</th><td>7:30 am – 9:00 pm</td></tr>
+          <tr data-day="3"><th scope="row">Wednesday</th><td>7:30 am – 9:00 pm</td></tr>
+          <tr data-day="4"><th scope="row">Thursday</th><td>7:30 am – 9:00 pm</td></tr>
+          <tr data-day="5"><th scope="row">Friday</th><td>7:30 am – 10:00 pm</td></tr>
+          <tr data-day="6"><th scope="row">Saturday</th><td>8:00 am – 10:00 pm</td></tr>
+          <tr data-day="0"><th scope="row">Sunday</th><td>8:00 am – 9:00 pm</td></tr>
+        </tbody>
+      </table>
+      <a class="btn btn--primary reveal" href="https://www.google.com/maps/dir/?api=1&destination=Bangsar%2C%20Kuala%20Lumpur" target="_blank" rel="noopener">Get Directions <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="visit__map reveal">
+      <iframe title="Map showing Bangsar, Kuala Lumpur" src="https://maps.google.com/maps?q=Bangsar%2C%20Kuala%20Lumpur&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="logo logo--light" href="#hero" aria-label="Ember &amp; Bean home">
+        <svg class="logo__mark" aria-hidden="true"><use href="#logo-mark"/></svg>
+        <span class="logo__text">Ember <em>&amp;</em> Bean</span>
+      </a>
+      <p>Roasted in-house. Served with care. A cozy place to slow down.</p>
+      <ul class="socials">
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+        <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer__title">Quick links</h2>
+      <ul class="footer__links">
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Order Online</a></li>
+        <li><a href="#book">Book a Table</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer__title">Opening hours</h2>
+      <ul class="footer__hours">
+        <li><span>Mon – Thu</span><span>7:30 am – 9 pm</span></li>
+        <li><span>Friday</span><span>7:30 am – 10 pm</span></li>
+        <li><span>Saturday</span><span>8 am – 10 pm</span></li>
+        <li><span>Sunday</span><span>8 am – 9 pm</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer__title">Stay in the loop</h2>
+      <p>New roasts and seasonal menus, once a month.</p>
+      <form class="newsletter" id="newsletter" novalidate>
+        <label class="sr-only" for="nlEmail">Email address</label>
+        <input id="nlEmail" type="email" autocomplete="email" placeholder="you@email.com" required>
+        <button class="btn btn--primary btn--sm" type="submit">Sign up</button>
+      </form>
+      <p class="newsletter__msg" id="newsletterMsg" role="status"></p>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>&copy; <span id="year">2026</span> Ember &amp; Bean. All rights reserved.</p>
+    <p>Portfolio demo. Photos from Unsplash.</p>
+  </div>
+</footer>
+
+<!-- ============ CART ============ -->
+<button class="cart-fab" id="cartFab" type="button" aria-label="Open cart" hidden>
+  <svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg>
+  <span id="cartFabTotal">RM 0.00</span>
+  <b id="cartFabCount">0</b>
+</button>
+
+<div class="overlay" id="overlay" hidden></div>
+<aside class="cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle" tabindex="-1" inert>
+  <div class="cart__head">
+    <h2 id="cartTitle">Your order</h2>
+    <button class="icon-btn" id="cartClose" type="button" aria-label="Close cart"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></button>
+  </div>
+
+  <div class="cart__view" id="cartView">
+    <ul class="cart__items" id="cartItems"></ul>
+    <div class="cart__empty" id="cartEmpty">
+      <svg class="icon" aria-hidden="true"><use href="#i-cup"/></svg>
+      <p>Nothing here yet. Your next favourite is on the menu.</p>
+      <a class="btn btn--outline-dark btn--sm" href="#menu" id="cartBrowse">Browse the menu</a>
+    </div>
+
+    <div class="cart__foot" id="cartFoot">
+      <div class="toggle toggle--light" role="radiogroup" aria-label="Order type">
+        <button type="button" class="toggle__btn" role="radio" data-mode="pickup"><svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg> Pickup</button>
+        <button type="button" class="toggle__btn" role="radio" data-mode="delivery"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg> Delivery</button>
+      </div>
+      <div class="field" data-for="pickup">
+        <label for="cartPickup">Pickup time</label>
+        <select id="cartPickup" data-bind="pickupTime"></select>
+      </div>
+      <div class="field" data-for="delivery" hidden>
+        <label for="cartAddress">Delivery address</label>
+        <textarea id="cartAddress" data-bind="address" rows="2" autocomplete="street-address" placeholder="Unit, street and postcode"></textarea>
+        <p class="field__error" id="cartAddress-err"></p>
+      </div>
+      <dl class="totals">
+        <div><dt>Subtotal</dt><dd id="cartSubtotal">RM 0.00</dd></div>
+        <div id="cartDeliveryRow" hidden><dt>Delivery</dt><dd>RM 6.00</dd></div>
+        <div class="totals__grand"><dt>Total</dt><dd id="cartTotal">RM 0.00</dd></div>
+      </dl>
+      <button class="btn btn--primary btn--block" id="checkout" type="button">Checkout</button>
+    </div>
+  </div>
+
+  <div class="success success--cart" id="orderSuccess" tabindex="-1" hidden>
+    <div class="success__icon"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div>
+    <h3>Thanks, your order is in!</h3>
+    <p id="orderSuccessText"></p>
+    <button class="btn btn--outline-dark" id="orderDone" type="button">Back to the café</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/hero.js" defer></script>
+<script src="js/data.js" defer></script>
+<script src="js/app.js" defer></script>
+</body>
+</html>
